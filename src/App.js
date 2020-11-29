@@ -9,7 +9,7 @@ const App = () => {
 
   useEffect(() => {
     (async() => {
-      const users = await (await fetch('http://jsonplaceholder.typicode.com/users')).json();
+      const users = await (await fetch('https://jsonplaceholder.typicode.com/users')).json();
       console.log('wew')
       setMonsters(users);
     })();

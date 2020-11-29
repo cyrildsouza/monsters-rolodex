@@ -10,7 +10,6 @@ const App = () => {
   useEffect(() => {
     (async() => {
       const users = await (await fetch('https://jsonplaceholder.typicode.com/users')).json();
-      console.log('wew')
       setMonsters(users);
     })();
 
@@ -21,7 +20,7 @@ const App = () => {
   }
 
   const filteredMonsters = monsters.filter((monster) => monster.name.toLowerCase().includes(searchField.toLowerCase()));
-console.log('render')
+
   return (
     <div className="App">
       <h1>Monsters Rolodex</h1>
